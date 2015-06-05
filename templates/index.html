@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flask HTML</title>
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+</head>
+<body>
+    {{name}}BLA
+    
+    <script>
+     var jqxhr = $.getJSON( "/data/", function() {
+  console.log( "success" );
+})
+  .done(function(data) {
+      console.log(data);
+  })
+  .fail(function() {
+    console.log( "error" );
+  })
+  .always(function() {
+    console.log( "complete" );
+  });
+        
+        
+    </script>
+</body>
+</html>
